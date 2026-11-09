@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安检通道调度系统 - 人员排班</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .main-container {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 220px;
+            background: linear-gradient(180deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 0;
+        }
+        .sidebar-logo {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+        .nav-menu {
+            list-style: none;
+        }
+        .nav-item {
+            margin-bottom: 5px;
+        }
+        .nav-link {
+            display: block;
+            padding: 12px 25px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .nav-link.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-left: 3px solid #4fc3f7;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .header-bar {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .page-title {
+            font-size: 20px;
+            color: #1e3c72;
+            font-weight: bold;
+        }
+        .user-info {
+            color: #666;
+            font-size: 14px;
+        }
+        .logout-btn {
+            color: #ff4757;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            flex: 1;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-size: 14px;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #2a5298;
+            color: white;
+        }
+        .btn-success {
+            background: #2ed573;
+            color: white;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th,
+        .table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        .table th {
+            background: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar">
+            <div class="sidebar-logo">安检通道调度系统</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/data-import" class="nav-link">数据导入</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/data-management" class="nav-link">数据管理</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/schedule" class="nav-link">通道调度</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/roster" class="nav-link active">人员排班</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/analysis" class="nav-link">历史分析</a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <!-- 主内容区 -->
+        <div class="main-content">
+            <!-- 顶部标题栏 -->
+            <div class="header-bar">
+                <div class="page-title">人员排班</div>
+                <div class="user-info">
+                    <a href="/logout" class="logout-btn">退出登录</a>
+                </div>
+            </div>
+
+            <!-- 排班条件 -->
+            <div class="card">
+                <div class="card-title">排班生成</div>
+                <form id="rosterForm" onsubmit="return generateRoster()">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="weekStart">排班周期</label>
+                            <select id="weekStart" name="weekStart">
+                                <option value="">请选择排班周</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>&nbsp;</label>
+                            <button type="submit" class="btn btn-primary">生成排班</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 排班结果表格 -->
+            <div class="card">
+                <div class="card-title">排班结果</div>
+                <table class="table" id="rosterTable">
+                    <thead>
+                        <tr>
+                            <th>时段</th>
+                            <th>周一</th>
+                            <th>周二</th>
+                            <th>周三</th>
+                            <th>周四</th>
+                            <th>周五</th>
+                            <th>周六</th>
+                            <th>周日</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rosterBody">
+                        <tr>
+                            <td>早班 (06:00-14:00)</td>
+                            <td colspan="7" style="text-align:center;color:#999;">请先选择排班周期并点击生成排班</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 15px;">
+                    <button type="button" class="btn btn-success" onclick="toggleEdit()">手动调整</button>
+                    <button type="button" class="btn btn-primary" style="float: right;" onclick="exportRoster()">导出排班</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentRoster = null;
+        let isEditing = false;
+        const simulationResult = {{ simulation_result|tojson if simulation_result else 'null' }};
+
+        // 页面加载时动态生成全年52周选项
+        window.onload = function() {
+            generateWeekOptions();
+        };
+
+        function generateWeekOptions() {
+            const select = document.getElementById('weekStart');
+            const now = new Date();
+            const year = now.getFullYear();
+            
+            // 找到当年第一个周一
+            let firstDay = new Date(year, 0, 1);
+            while (firstDay.getDay() !== 1) {
+                firstDay.setDate(firstDay.getDate() + 1);
+            }
+            
+            // 默认选中「预测日期所在周的周一」
+            let targetWeekStart = null;
+            let fallbackWeekStart = null;
+            {
+                const today = new Date();
+                const dow = today.getDay();
+                const fdiff = dow === 0 ? -6 : 1 - dow;
+                fallbackWeekStart = new Date(today);
+                fallbackWeekStart.setDate(today.getDate() + fdiff);
+            }
+            if (simulationResult && simulationResult.predict_date) {
+                const predictDate = new Date(simulationResult.predict_date);
+                const dayOfWeek = predictDate.getDay();
+                const diff = dayOfWeek === 0 ? -6 : 1 - dayOfWeek;
+                targetWeekStart = new Date(predictDate);
+                targetWeekStart.setDate(predictDate.getDate() + diff);
+            }
+            
+            // 生成52周
+            for (let i = 0; i < 52; i++) {
+                const weekStart = new Date(firstDay);
+                weekStart.setDate(firstDay.getDate() + i * 7);
+                const weekEnd = new Date(weekStart);
+                weekEnd.setDate(weekStart.getDate() + 6);
+                
+                const startStr = formatDate(weekStart);
+                const endStr = formatDate(weekEnd);
+                const label = `${weekStart.getFullYear()}年${weekStart.getMonth() + 1}月${weekStart.getDate()}日 - ${weekEnd.getMonth() + 1}月${weekEnd.getDate()}日`;
+                
+                const option = document.createElement('option');
+                option.value = startStr;
+                option.textContent = label;
+                
+                // 默认选中预测日期所在的周
+                if (targetWeekStart && startStr === formatDate(targetWeekStart)) {
+                    option.selected = true;
+                }
+                select.appendChild(option);
+            }
+
+            // 预测日期不在本年列表里时，退回到本周，保证始终有默认值
+            if (!select.value) {
+                const fb = fallbackWeekStart ? formatDate(fallbackWeekStart) : '';
+                Array.prototype.slice.call(select.options).forEach(o => {
+                    if (o.value === fb) { o.selected = true; }
+                });
+            }
+        }
+
+        function formatDate(date) {
+            const y = date.getFullYear();
+            const m = String(date.getMonth() + 1).padStart(2, '0');
+            const d = String(date.getDate()).padStart(2, '0');
+            return `${y}-${m}-${d}`;
+        }
+
+        function generateRoster() {
+            const weekStart = document.getElementById('weekStart').value;
+            if (!weekStart) {
+                alert('请选择排班周期');
+                return false;
+            }
+
+            const btn = document.querySelector('#rosterForm button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'AI正在生成排班...';
+            btn.disabled = true;
+
+            const formData = new FormData();
+            formData.append('weekStart', weekStart);
+
+            fetch('/generate-roster', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    currentRoster = result.data.roster;
+                    renderRoster(currentRoster);
+                    alert('排班生成成功！');
+                } else {
+                    alert(result.message);
+                }
+            })
+            .catch(error => {
+                alert('生成排班失败：' + error);
+            })
+            .finally(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+            });
+            return false;
+        }
+
+        function renderRoster(roster) {
+            const tbody = document.getElementById('rosterBody');
+            const shifts = [
+                { key: '早班', label: '早班 (06:00-14:00)' },
+                { key: '中班', label: '中班 (14:00-22:00)' },
+                { key: '晚班', label: '晚班 (22:00-06:00)' }
+            ];
+
+            let html = '';
+            shifts.forEach(shift => {
+                html += `<tr><td>${shift.label}</td>`;
+                if (roster[shift.key]) {
+                    roster[shift.key].forEach(day => {
+                        const names = day.names ? day.names.join('、') : '';
+                        html += `<td title="${names}">${day.count}人</td>`;
+                    });
+                }
+                html += '</tr>';
+            });
+            tbody.innerHTML = html;
+        }
+
+        function toggleEdit() {
+            if (!currentRoster) {
+                alert('请先生成排班');
+                return;
+            }
+            isEditing = !isEditing;
+            const btn = event.target;
+            if (isEditing) {
+                btn.textContent = '保存调整';
+                // 将每个单元格变为可编辑
+                const cells = document.querySelectorAll('#rosterBody td:not(:first-child)');
+                cells.forEach((cell, index) => {
+                    const shiftIdx = Math.floor(index / 7);
+                    const dayIdx = index % 7;
+                    const shiftKeys = ['早班', '中班', '晚班'];
+                    const currentCount = currentRoster[shiftKeys[shiftIdx]][dayIdx].count;
+                    cell.innerHTML = `<input type="number" value="${currentCount}" min="1" max="20" 
+                        style="width:50px;text-align:center;" data-shift="${shiftKeys[shiftIdx]}" data-day="${dayIdx}">`;
+                });
+            } else {
+                btn.textContent = '手动调整';
+                // 保存修改
+                const inputs = document.querySelectorAll('#rosterBody input');
+                inputs.forEach(input => {
+                    const shift = input.dataset.shift;
+                    const day = parseInt(input.dataset.day);
+                    const newCount = parseInt(input.value) || 1;
+                    currentRoster[shift][day].count = newCount;
+                });
+                renderRoster(currentRoster);
+                // 保存到后端
+                const formData = new FormData();
+                formData.append('rosterData', JSON.stringify(currentRoster));
+                fetch('/save-roster', { method: 'POST', body: formData });
+                alert('排班调整已保存！');
+            }
+        }
+
+        function exportRoster() {
+            if (!currentRoster) {
+                alert('请先生成排班');
+                return;
+            }
+            window.location.href = '/export-roster';
+        }
+    </script>
+</body>
+</html>

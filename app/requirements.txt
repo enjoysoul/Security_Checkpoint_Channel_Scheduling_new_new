@@ -1,0 +1,10 @@
+flask==3.0.3
+pypinyin
+openpyxl
+numpy
+# 说明：
+# - numpy：forecasting.py（季度傅里叶最小二乘拟合）与 simulation.py 依赖，运行时必需。
+# - openai：已移除。客流模拟(/simulate)与人员定员(/generate-roster)均改为确定性算法引擎，
+#   不再联网调用大模型，故不再依赖 openai（同时去掉 API Key 与约 26MB 体积）。
+# - pandas：可选。仅 init_db.py 在「guide/ 目录存在原始 Excel」时用于导入机场列表，
+#   代码里是 try/except 可选导入，运行时不需要；打包时建议在 PyInstaller 中显式排除。

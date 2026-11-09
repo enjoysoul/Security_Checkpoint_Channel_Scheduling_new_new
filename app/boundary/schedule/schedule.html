@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安检通道调度系统 - 通道调度</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background-color: #f5f7fa; color: #333; }
+        .main-container { display: flex; min-height: 100vh; }
+        .sidebar { width: 220px; background: linear-gradient(180deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 20px 0; }
+        .sidebar-logo { text-align: center; font-size: 18px; font-weight: bold; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 20px; }
+        .nav-menu { list-style: none; }
+        .nav-item { margin-bottom: 5px; }
+        .nav-link { display: block; padding: 12px 25px; color: rgba(255,255,255,0.8); text-decoration: none; transition: all 0.3s; }
+        .nav-link:hover { background: rgba(255,255,255,0.1); color: white; }
+        .nav-link.active { background: rgba(255,255,255,0.15); color: white; border-left: 3px solid #4fc3f7; }
+        .main-content { flex: 1; padding: 20px; overflow-y: auto; }
+        .header-bar { background: white; padding: 15px 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .page-title { font-size: 20px; color: #1e3c72; font-weight: bold; }
+        .user-info { color: #666; font-size: 14px; }
+        .logout-btn { color: #ff4757; text-decoration: none; margin-left: 15px; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); padding: 20px; margin-bottom: 20px; }
+        .card-title { font-size: 16px; color: #333; font-weight: bold; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .form-row { display: flex; gap: 20px; margin-bottom: 15px; }
+        .form-group { flex: 1; }
+        .form-group label { display: block; margin-bottom: 5px; color: #666; font-size: 14px; }
+        .form-group input, .form-group select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .btn { padding: 10px 20px; border: none; border-radius: 5px; font-size: 14px; cursor: pointer; transition: all 0.3s; margin-right: 10px; }
+        .btn-primary { background: #2a5298; color: white; }
+        .btn-primary:hover { background: #1e3c72; }
+        .btn-secondary { background: #f5f5f5; color: #666; border: 1px solid #ddd; }
+        .btn-success { background: #2ed573; color: white; }
+        .btn-success:hover { background: #26af61; }
+        .table { width: 100%; border-collapse: collapse; }
+        .table th, .table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .table th { background: #f8f9fa; color: #333; font-weight: bold; }
+        .status-maintain { color: #ffa502; font-weight: bold; }
+        .result-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+        .result-item { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .result-label { font-size: 13px; color: #666; margin-bottom: 5px; }
+        .result-value { font-size: 24px; font-weight: bold; color: #1e3c72; }
+        .suggestion-box { background: #f0f7ff; border-left: 4px solid #2a5298; padding: 15px; border-radius: 5px; margin-top: 15px; }
+        .suggestion-box h4 { color: #1e3c72; margin-bottom: 10px; }
+        .suggestion-box p { color: #555; line-height: 1.8; }
+        select { padding: 6px 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-logo">安检通道调度系统</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/data-import" class="nav-link">数据导入</a></li>
+                <li class="nav-item"><a href="/data-management" class="nav-link">数据管理</a></li>
+                <li class="nav-item"><a href="/schedule" class="nav-link active">通道调度</a></li>
+                <li class="nav-item"><a href="/roster" class="nav-link">人员排班</a></li>
+                <li class="nav-item"><a href="/analysis" class="nav-link">历史分析</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header-bar">
+                <div class="page-title">通道调度</div>
+                <div class="user-info"><a href="/logout" class="logout-btn">退出登录</a></div>
+            </div>
+
+            <!-- 调度查询 -->
+            <div class="card">
+                <div class="card-title">调度查询</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">选择日期</label>
+                        <input type="date" id="date" name="date" value="{{ simulation_result.predict_date if simulation_result else '' }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="hour">选择时段</label>
+                        <select id="hour" name="hour">
+                            <option value="">请选择时段</option>
+                            <option value="0">00:00-01:00</option>
+                            <option value="1">01:00-02:00</option>
+                            <option value="2">02:00-03:00</option>
+                            <option value="3">03:00-04:00</option>
+                            <option value="4">04:00-05:00</option>
+                            <option value="5">05:00-06:00</option>
+                            <option value="6">06:00-07:00</option>
+                            <option value="7">07:00-08:00</option>
+                            <option value="8">08:00-09:00</option>
+                            <option value="9">09:00-10:00</option>
+                            <option value="10">10:00-11:00</option>
+                            <option value="11">11:00-12:00</option>
+                            <option value="12">12:00-13:00</option>
+                            <option value="13">13:00-14:00</option>
+                            <option value="14">14:00-15:00</option>
+                            <option value="15">15:00-16:00</option>
+                            <option value="16">16:00-17:00</option>
+                            <option value="17">17:00-18:00</option>
+                            <option value="18">18:00-19:00</option>
+                            <option value="19">19:00-20:00</option>
+                            <option value="20">20:00-21:00</option>
+                            <option value="21">21:00-22:00</option>
+                            <option value="22">22:00-23:00</option>
+                            <option value="23">23:00-24:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <button type="button" class="btn btn-primary" onclick="calculateSchedule()">计算调度</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 调度建议 -->
+            <div class="card" id="scheduleResultCard" style="display:none;">
+                <div class="card-title">调度建议</div>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">当前时段客流量</div>
+                        <div class="result-value" id="hourFlow">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">建议开放通道数</div>
+                        <div class="result-value" id="recommendChannels">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">预计平均等待时间</div>
+                        <div class="result-value" id="avgWaitTime">-</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">通道利用率</div>
+                        <div class="result-value" id="utilization">-</div>
+                    </div>
+                </div>
+                <div class="suggestion-box">
+                    <h4>智能调度建议</h4>
+                    <p id="suggestionText">请先选择日期和时段，点击"计算调度"按钮获取调度建议。</p>
+                </div>
+            </div>
+
+            <!-- 通道实时状态 -->
+            <div class="card">
+                <div class="card-title">通道实时状态</div>
+                <table class="table" id="channelTable">
+                    <thead>
+                        <tr>
+                            <th>通道编号</th>
+                            <th>通道类型</th>
+                            <th>当前状态</th>
+                            <th>等待人数</th>
+                            <th>平均等待时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="channelTableBody">
+                        {% for channel in channels %}
+                        <tr data-id="{{ channel.id }}">
+                            <td>{{ channel.channel_code }}</td>
+                            <td>{{ channel.channel_type }}</td>
+                            <td>
+                                {% if channel.status == '维护中' %}
+                                    <span class="status-maintain">维护中</span>
+                                    <input type="hidden" class="channel-status" value="维护中">
+                                {% else %}
+                                    <select class="channel-status" onchange="updateChannelStatus(this)">
+                                        <option value="开放" {% if channel.status == '开放' %}selected{% endif %}>开放</option>
+                                        <option value="关闭" {% if channel.status == '关闭' %}selected{% endif %}>关闭</option>
+                                    </select>
+                                {% endif %}
+                            </td>
+                            <td class="wait-count">-</td>
+                            <td class="wait-time">-</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <div style="margin-top: 15px;">
+                    <button type="button" class="btn btn-success" onclick="confirmExecute()">确认执行</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetChannels()">重置状态</button>
+                    <button type="button" class="btn btn-primary" style="float: right;" onclick="exportResult()">导出结果</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 全局变量
+        let currentScheduleResult = null;
+        let simulationResult = {{ simulation_result|tojson if simulation_result else 'null' }};
+
+        // 阶乘函数
+        function factorial(n) {
+            if (n <= 1) return 1;
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        // 页面加载时设置默认日期
+        window.onload = function() {
+            if (!document.getElementById('date').value) {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = String(today.getMonth() + 1).padStart(2, '0');
+                const day = String(today.getDate()).padStart(2, '0');
+                document.getElementById('date').value = `${year}-${month}-${day}`;
+            }
+        };
+
+        // 计算调度
+        function calculateSchedule() {
+            const date = document.getElementById('date').value;
+            const hour = document.getElementById('hour').value;
+
+            if (!date) { alert('请选择日期'); return; }
+            if (!hour) { alert('请选择时段'); return; }
+
+            const formData = new FormData();
+            formData.append('date', date);
+            formData.append('hour', hour);
+
+            fetch('/calculate-schedule', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    currentScheduleResult = data.data;
+                    displayScheduleResult(data.data);
+                } else {
+                    alert('计算失败：' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('网络错误，请重试');
+            });
+        }
+
+        // 显示调度结果
+        function displayScheduleResult(data) {
+            document.getElementById('scheduleResultCard').style.display = 'block';
+            document.getElementById('hourFlow').textContent = data.hourFlow + ' 人';
+            document.getElementById('recommendChannels').textContent = data.recommendChannels + ' 个';
+            document.getElementById('avgWaitTime').textContent = data.overload
+                ? '＞' + String(Math.round(parseFloat(data.avgWaitTime) || 0)) + ' 分钟（严重超载）'
+                : data.avgWaitTime + ' 分钟';
+            document.getElementById('utilization').textContent = data.utilization + '%';
+            document.getElementById('suggestionText').textContent = data.suggestion;
+        }
+
+        // 更新通道状态
+        function updateChannelStatus(select) {
+            // 状态改变时可以添加一些逻辑
+        }
+
+        // 确认执行 - 根据模拟结果预测等待人数和等待时间
+        function confirmExecute() {
+            if (!currentScheduleResult) {
+                alert('请先点击"计算调度"获取调度建议');
+                return;
+            }
+
+            const rows = document.querySelectorAll('#channelTableBody tr');
+            const openChannels = [];
+            const openChannelIds = [];
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const statusInput = row.querySelector('.channel-status');
+                const status = statusInput ? statusInput.value : '维护中';
+                // 所有通道均为普通通道，开放的通道都纳入客流分摊
+                if (status === '开放') {
+                    openChannels.push(row);
+                    openChannelIds.push(cells[0].textContent);
+                } else {
+                    row.querySelector('.wait-count').textContent = '-';
+                    row.querySelector('.wait-time').textContent = '-';
+                }
+            });
+
+            if (openChannels.length === 0) {
+                alert('当前没有开放的通道');
+                return;
+            }
+
+            // 直接采用后端算好的排队论结果，避免前后端各算一遍导致数字打架
+            const waitMin = parseFloat(currentScheduleResult.avgWaitTime);
+            const lam = (currentScheduleResult.hourFlow || 0) / 60;   // 人/分钟
+            const c = Math.max(1, openChannels.length);
+            const safeWait = isFinite(waitMin) ? Math.max(0, waitMin) : 0;
+            // 排队总人数 = 到达率 × 平均等待时间（Little 公式），再均摊到各通道
+            const queueTotal = Math.max(0, Math.round(lam * safeWait));
+            const perChannelQueue = Math.round(queueTotal / c);
+
+            // 按通道类型给不同的到达占比：普通通道承担主要客流，专用通道明显更少
+            const TYPE_WEIGHT = {
+                '头等舱/军人优先通道': 0.35,
+                '晚到/爱心通道': 0.55,
+                '综合保障通道': 0.30,
+                '备用通道': 0.60
+            };
+            const weightOf = t => (TYPE_WEIGHT[t] !== undefined ? TYPE_WEIGHT[t] : 1.0);
+            const defs = openChannels.map(row => ({
+                row: row,
+                type: (row.querySelectorAll('td')[1] || {}).textContent || ''
+            }));
+            // 位置系数：同类型通道因距离入口远近不同，客流略有差异（固定，不随刷新变化）
+            const posFactor = idx => 0.88 + ((idx * 7) % 5) * 0.06;   // 0.88 ~ 1.12
+            const rawWeights = defs.map((d, idx) => weightOf(d.type.trim()) * posFactor(idx));
+            const totalWeight = rawWeights.reduce((a, b) => a + b, 0) || 1;
+
+            // 用最大余数法把总排队人数分到各通道：总数精确、各通道数值有差异
+            const exactShares = rawWeights.map(w => queueTotal * w / totalWeight);
+            const alloc = exactShares.map(v => Math.floor(v));
+            let remainder = queueTotal - alloc.reduce((a, b) => a + b, 0);
+            const order = exactShares
+                .map((v, i) => [v - Math.floor(v), i])
+                .sort((a, b) => b[0] - a[0]);
+            for (let k = 0; k < remainder && order.length; k++) {
+                alloc[order[k % order.length][1]] += 1;
+            }
+
+            defs.forEach((d, idx) => {
+                const w = weightOf(d.type.trim());
+                const share = rawWeights[idx] / totalWeight;   // 该通道承担的客流占比
+                const q = Math.max(0, alloc[idx]);
+                // 该通道的排队时长随其相对负载变化：普通通道≈系统平均，专用通道更短
+                const chWait = Math.max(0.1, safeWait * (share * c));
+                openChannelIds.push(d.row.querySelector('td:first-child').textContent);
+                d.row.querySelector('.wait-count').textContent = q;
+                d.row.querySelector('.wait-time').textContent = chWait.toFixed(1) + ' 分钟';
+            });
+
+            // 收集所有通道的详细数据
+            const allRows = document.querySelectorAll('#channelTableBody tr');
+            const channelDetails = [];
+            allRows.forEach(row => {
+                const cells = row.querySelectorAll('td');
+                const channelCode = cells[0].textContent;
+                const channelType = cells[1].textContent;
+                let channelStatus = '';
+                const statusSelect = row.querySelector('select.channel-status');
+                const statusSpan = row.querySelector('.status-maintain');
+                if (statusSelect) {
+                    channelStatus = statusSelect.value;
+                } else if (statusSpan) {
+                    channelStatus = statusSpan.textContent;
+                }
+                const waitCount = row.querySelector('.wait-count').textContent;
+                const waitTime = row.querySelector('.wait-time').textContent;
+                channelDetails.push({
+                    channel_code: channelCode,
+                    channel_type: channelType,
+                    status: channelStatus,
+                    wait_count: waitCount,
+                    wait_time: waitTime
+                });
+            });
+
+            // 保存调度结果到数据库
+            let simId = null;
+            if (simulationResult && simulationResult.sim_id) {
+                simId = simulationResult.sim_id;
+            }
+            
+            const scheduleData = {
+                sim_id: simId,
+                schedule_date: document.getElementById('date').value,
+                time_slot: document.getElementById('hour').value,
+                expected_flow: currentScheduleResult.hourFlow,
+                open_channels: openChannels.length,
+                channel_ids: openChannelIds.join(', '),
+                wait_time: avgWait.toFixed(1) + ' 分钟',
+                utilization: (rho * 100).toFixed(0) + '%',
+                channel_details: JSON.stringify(channelDetails)
+            };
+            
+            fetch('/save-schedule-result', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(scheduleData)
+            }).then(response => response.json())
+              .then(result => {
+                  if (result.success) {
+                      console.log('调度结果已保存到数据库');
+                  }
+              }).catch(err => {
+                  console.log('保存调度结果失败:', err);
+              });
+
+            alert('已确认执行，等待人数和等待时间已根据模拟结果更新');
+        }
+
+        // 重置通道状态
+        function resetChannels() {
+            const rows = document.querySelectorAll('#channelTableBody tr');
+            rows.forEach(row => {
+                const select = row.querySelector('select.channel-status');
+                if (select) {
+                    select.value = '开放';
+                }
+                row.querySelector('.wait-count').textContent = '-';
+                row.querySelector('.wait-time').textContent = '-';
+            });
+        }
+
+        // 导出结果
+        function exportResult() {
+            alert('导出结果功能待完善');
+        }
+    </script>
+</body>
+</html>

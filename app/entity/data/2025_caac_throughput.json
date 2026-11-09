@@ -1,0 +1,1605 @@
+{
+  "source": "中国民用航空局",
+  "title": "2025年全国民用运输机场吞吐量排名",
+  "year": 2025,
+  "publish_date": "",
+  "download_url": "http://www.caac.gov.cn/XXGK/XXGK/TJSJ/202602/P020260226360830390937.xlsx",
+  "airports": [
+    {
+      "airport": "上海/浦东",
+      "city": "上海",
+      "name": "浦东",
+      "passengers_2025": 84994548
+    },
+    {
+      "airport": "广州/白云",
+      "city": "广州",
+      "name": "白云",
+      "passengers_2025": 83582952
+    },
+    {
+      "airport": "北京/首都",
+      "city": "北京",
+      "name": "首都",
+      "passengers_2025": 70742712
+    },
+    {
+      "airport": "深圳/宝安",
+      "city": "深圳",
+      "name": "宝安",
+      "passengers_2025": 66485213
+    },
+    {
+      "airport": "成都/天府",
+      "city": "成都",
+      "name": "天府",
+      "passengers_2025": 56686738
+    },
+    {
+      "airport": "北京/大兴",
+      "city": "北京",
+      "name": "大兴",
+      "passengers_2025": 53618949
+    },
+    {
+      "airport": "杭州/萧山",
+      "city": "杭州",
+      "name": "萧山",
+      "passengers_2025": 50459018
+    },
+    {
+      "airport": "上海/虹桥",
+      "city": "上海",
+      "name": "虹桥",
+      "passengers_2025": 50151025
+    },
+    {
+      "airport": "重庆/江北",
+      "city": "重庆",
+      "name": "江北",
+      "passengers_2025": 50094770
+    },
+    {
+      "airport": "昆明/长水",
+      "city": "昆明",
+      "name": "长水",
+      "passengers_2025": 49705725
+    },
+    {
+      "airport": "西安/咸阳",
+      "city": "西安",
+      "name": "咸阳",
+      "passengers_2025": 48535594
+    },
+    {
+      "airport": "成都/双流",
+      "city": "成都",
+      "name": "双流",
+      "passengers_2025": 33518945
+    },
+    {
+      "airport": "南京/禄口",
+      "city": "南京",
+      "name": "禄口",
+      "passengers_2025": 31378166
+    },
+    {
+      "airport": "武汉/天河",
+      "city": "武汉",
+      "name": "天河",
+      "passengers_2025": 31339277
+    },
+    {
+      "airport": "长沙/黄花",
+      "city": "长沙",
+      "name": "黄花",
+      "passengers_2025": 30253675
+    },
+    {
+      "airport": "厦门/高崎",
+      "city": "厦门",
+      "name": "高崎",
+      "passengers_2025": 29193712
+    },
+    {
+      "airport": "郑州/新郑",
+      "city": "郑州",
+      "name": "新郑",
+      "passengers_2025": 29191990
+    },
+    {
+      "airport": "乌鲁木齐/天山",
+      "city": "乌鲁木齐",
+      "name": "天山",
+      "passengers_2025": 29179737
+    },
+    {
+      "airport": "青岛/胶东",
+      "city": "青岛",
+      "name": "胶东",
+      "passengers_2025": 26896534
+    },
+    {
+      "airport": "海口/美兰",
+      "city": "海口",
+      "name": "美兰",
+      "passengers_2025": 26851102
+    },
+    {
+      "airport": "沈阳/桃仙",
+      "city": "沈阳",
+      "name": "桃仙",
+      "passengers_2025": 24938062
+    },
+    {
+      "airport": "哈尔滨/太平",
+      "city": "哈尔滨",
+      "name": "太平",
+      "passengers_2025": 24650717
+    },
+    {
+      "airport": "贵阳/龙洞堡",
+      "city": "贵阳",
+      "name": "龙洞堡",
+      "passengers_2025": 22731681
+    },
+    {
+      "airport": "三亚/凤凰",
+      "city": "三亚",
+      "name": "凤凰",
+      "passengers_2025": 22685734
+    },
+    {
+      "airport": "济南/遥墙",
+      "city": "济南",
+      "name": "遥墙",
+      "passengers_2025": 20329972
+    },
+    {
+      "airport": "天津/滨海",
+      "city": "天津",
+      "name": "滨海",
+      "passengers_2025": 19862196
+    },
+    {
+      "airport": "大连/周水子",
+      "city": "大连",
+      "name": "周水子",
+      "passengers_2025": 19787716
+    },
+    {
+      "airport": "长春/龙嘉",
+      "city": "长春",
+      "name": "龙嘉",
+      "passengers_2025": 17759299
+    },
+    {
+      "airport": "兰州/中川",
+      "city": "兰州",
+      "name": "中川",
+      "passengers_2025": 17734885
+    },
+    {
+      "airport": "宁波/栎社",
+      "city": "宁波",
+      "name": "栎社",
+      "passengers_2025": 16125459
+    },
+    {
+      "airport": "福州/长乐",
+      "city": "福州",
+      "name": "长乐",
+      "passengers_2025": 16117180
+    },
+    {
+      "airport": "太原/武宿",
+      "city": "太原",
+      "name": "武宿",
+      "passengers_2025": 14573546
+    },
+    {
+      "airport": "南宁/吴圩",
+      "city": "南宁",
+      "name": "吴圩",
+      "passengers_2025": 13502293
+    },
+    {
+      "airport": "珠海/金湾",
+      "city": "珠海",
+      "name": "金湾",
+      "passengers_2025": 13252642
+    },
+    {
+      "airport": "温州/龙湾",
+      "city": "温州",
+      "name": "龙湾",
+      "passengers_2025": 13058523
+    },
+    {
+      "airport": "呼和浩特/白塔",
+      "city": "呼和浩特",
+      "name": "白塔",
+      "passengers_2025": 12722692
+    },
+    {
+      "airport": "合肥/新桥",
+      "city": "合肥",
+      "name": "新桥",
+      "passengers_2025": 12644989
+    },
+    {
+      "airport": "石家庄/正定",
+      "city": "石家庄",
+      "name": "正定",
+      "passengers_2025": 12014301
+    },
+    {
+      "airport": "南昌/昌北",
+      "city": "南昌",
+      "name": "昌北",
+      "passengers_2025": 11936032
+    },
+    {
+      "airport": "无锡/硕放",
+      "city": "无锡",
+      "name": "硕放",
+      "passengers_2025": 10967778
+    },
+    {
+      "airport": "揭阳/潮汕",
+      "city": "揭阳",
+      "name": "潮汕",
+      "passengers_2025": 10228556
+    },
+    {
+      "airport": "银川/河东",
+      "city": "银川",
+      "name": "河东",
+      "passengers_2025": 9860514
+    },
+    {
+      "airport": "泉州/晋江",
+      "city": "泉州",
+      "name": "晋江",
+      "passengers_2025": 8852384
+    },
+    {
+      "airport": "丽江/三义",
+      "city": "丽江",
+      "name": "三义",
+      "passengers_2025": 8631218
+    },
+    {
+      "airport": "烟台/蓬莱",
+      "city": "烟台",
+      "name": "蓬莱",
+      "passengers_2025": 8036554
+    },
+    {
+      "airport": "西宁/曹家堡",
+      "city": "西宁",
+      "name": "曹家堡",
+      "passengers_2025": 7877903
+    },
+    {
+      "airport": "西双版纳/嘎洒",
+      "city": "西双版纳",
+      "name": "嘎洒",
+      "passengers_2025": 7711821
+    },
+    {
+      "airport": "桂林/两江",
+      "city": "桂林",
+      "name": "两江",
+      "passengers_2025": 6504366
+    },
+    {
+      "airport": "拉萨/贡嘎",
+      "city": "拉萨",
+      "name": "贡嘎",
+      "passengers_2025": 6284823
+    },
+    {
+      "airport": "喀什/徕宁",
+      "city": "喀什",
+      "name": "徕宁",
+      "passengers_2025": 5233499
+    },
+    {
+      "airport": "常州/奔牛",
+      "city": "常州",
+      "name": "奔牛",
+      "passengers_2025": 5139214
+    },
+    {
+      "airport": "扬州/泰州",
+      "city": "扬州",
+      "name": "泰州",
+      "passengers_2025": 4163596
+    },
+    {
+      "airport": "南通/兴东",
+      "city": "南通",
+      "name": "兴东",
+      "passengers_2025": 4161852
+    },
+    {
+      "airport": "徐州/观音",
+      "city": "徐州",
+      "name": "观音",
+      "passengers_2025": 4082736
+    },
+    {
+      "airport": "大理/凤仪",
+      "city": "大理",
+      "name": "凤仪",
+      "passengers_2025": 3750473
+    },
+    {
+      "airport": "义乌",
+      "city": "",
+      "name": "义乌",
+      "passengers_2025": 3684507
+    },
+    {
+      "airport": "伊犁/伊宁",
+      "city": "伊犁",
+      "name": "伊宁",
+      "passengers_2025": 3454959
+    },
+    {
+      "airport": "宜昌/三峡",
+      "city": "宜昌",
+      "name": "三峡",
+      "passengers_2025": 3406149
+    },
+    {
+      "airport": "惠州/平潭",
+      "city": "惠州",
+      "name": "平潭",
+      "passengers_2025": 3365186
+    },
+    {
+      "airport": "绵阳/南郊",
+      "city": "绵阳",
+      "name": "南郊",
+      "passengers_2025": 3286383
+    },
+    {
+      "airport": "呼伦贝尔/海拉尔",
+      "city": "呼伦贝尔",
+      "name": "海拉尔",
+      "passengers_2025": 3239067
+    },
+    {
+      "airport": "鄂尔多斯/伊金霍洛",
+      "city": "鄂尔多斯",
+      "name": "伊金霍洛",
+      "passengers_2025": 3201398
+    },
+    {
+      "airport": "湛江/吴川",
+      "city": "湛江",
+      "name": "吴川",
+      "passengers_2025": 3122262
+    },
+    {
+      "airport": "榆林/榆阳",
+      "city": "榆林",
+      "name": "榆阳",
+      "passengers_2025": 3106499
+    },
+    {
+      "airport": "德宏/芒市",
+      "city": "德宏",
+      "name": "芒市",
+      "passengers_2025": 3075024
+    },
+    {
+      "airport": "库尔勒/梨城",
+      "city": "库尔勒",
+      "name": "梨城",
+      "passengers_2025": 2959190
+    },
+    {
+      "airport": "北海/福成",
+      "city": "北海",
+      "name": "福成",
+      "passengers_2025": 2955931
+    },
+    {
+      "airport": "威海/大水泊",
+      "city": "威海",
+      "name": "大水泊",
+      "passengers_2025": 2908096
+    },
+    {
+      "airport": "舟山/普陀山",
+      "city": "舟山",
+      "name": "普陀山",
+      "passengers_2025": 2888463
+    },
+    {
+      "airport": "运城/盐湖",
+      "city": "运城",
+      "name": "盐湖",
+      "passengers_2025": 2873454
+    },
+    {
+      "airport": "阿克苏/红旗坡",
+      "city": "阿克苏",
+      "name": "红旗坡",
+      "passengers_2025": 2778946
+    },
+    {
+      "airport": "临沂/启阳",
+      "city": "临沂",
+      "name": "启阳",
+      "passengers_2025": 2467279
+    },
+    {
+      "airport": "台州/路桥",
+      "city": "台州",
+      "name": "路桥",
+      "passengers_2025": 2447367
+    },
+    {
+      "airport": "泸州/云龙",
+      "city": "泸州",
+      "name": "云龙",
+      "passengers_2025": 2382039
+    },
+    {
+      "airport": "赣州/黄金",
+      "city": "赣州",
+      "name": "黄金",
+      "passengers_2025": 2235615
+    },
+    {
+      "airport": "宜宾/五粮液",
+      "city": "宜宾",
+      "name": "五粮液",
+      "passengers_2025": 2091670
+    },
+    {
+      "airport": "张家界/荷花",
+      "city": "张家界",
+      "name": "荷花",
+      "passengers_2025": 2062663
+    },
+    {
+      "airport": "盐城/南洋",
+      "city": "盐城",
+      "name": "南洋",
+      "passengers_2025": 2034871
+    },
+    {
+      "airport": "淮安/涟水",
+      "city": "淮安",
+      "name": "涟水",
+      "passengers_2025": 2007564
+    },
+    {
+      "airport": "包头/东河",
+      "city": "包头",
+      "name": "东河",
+      "passengers_2025": 1965255
+    },
+    {
+      "airport": "恩施/许家坪",
+      "city": "恩施",
+      "name": "许家坪",
+      "passengers_2025": 1947626
+    },
+    {
+      "airport": "和田/昆冈",
+      "city": "和田",
+      "name": "昆冈",
+      "passengers_2025": 1939110
+    },
+    {
+      "airport": "赤峰/玉龙",
+      "city": "赤峰",
+      "name": "玉龙",
+      "passengers_2025": 1900454
+    },
+    {
+      "airport": "襄阳/刘集",
+      "city": "襄阳",
+      "name": "刘集",
+      "passengers_2025": 1899754
+    },
+    {
+      "airport": "连云港/花果山",
+      "city": "连云港",
+      "name": "花果山",
+      "passengers_2025": 1746839
+    },
+    {
+      "airport": "十堰/武当山",
+      "city": "十堰",
+      "name": "武当山",
+      "passengers_2025": 1533810
+    },
+    {
+      "airport": "济宁/大安",
+      "city": "济宁",
+      "name": "大安",
+      "passengers_2025": 1503617
+    },
+    {
+      "airport": "兴义/万峰林",
+      "city": "兴义",
+      "name": "万峰林",
+      "passengers_2025": 1466421
+    },
+    {
+      "airport": "佛山/沙堤",
+      "city": "佛山",
+      "name": "沙堤",
+      "passengers_2025": 1460420
+    },
+    {
+      "airport": "遵义/新舟",
+      "city": "遵义",
+      "name": "新舟",
+      "passengers_2025": 1388520
+    },
+    {
+      "airport": "延吉/朝阳川",
+      "city": "延吉",
+      "name": "朝阳川",
+      "passengers_2025": 1383620
+    },
+    {
+      "airport": "通辽",
+      "city": "",
+      "name": "通辽",
+      "passengers_2025": 1356501
+    },
+    {
+      "airport": "东营/胜利",
+      "city": "东营",
+      "name": "胜利",
+      "passengers_2025": 1300766
+    },
+    {
+      "airport": "敦煌/莫高",
+      "city": "敦煌",
+      "name": "莫高",
+      "passengers_2025": 1285341
+    },
+    {
+      "airport": "嘉峪关/酒泉",
+      "city": "嘉峪关",
+      "name": "酒泉",
+      "passengers_2025": 1280756
+    },
+    {
+      "airport": "荆州/沙市",
+      "city": "荆州",
+      "name": "沙市",
+      "passengers_2025": 1250867
+    },
+    {
+      "airport": "遵义/茅台",
+      "city": "遵义",
+      "name": "茅台",
+      "passengers_2025": 1221929
+    },
+    {
+      "airport": "柳州/白莲",
+      "city": "柳州",
+      "name": "白莲",
+      "passengers_2025": 1210438
+    },
+    {
+      "airport": "锡林浩特",
+      "city": "",
+      "name": "锡林浩特",
+      "passengers_2025": 1185919
+    },
+    {
+      "airport": "阿勒泰/雪都",
+      "city": "阿勒泰",
+      "name": "雪都",
+      "passengers_2025": 1174857
+    },
+    {
+      "airport": "衡阳/南岳",
+      "city": "衡阳",
+      "name": "南岳",
+      "passengers_2025": 1145286
+    },
+    {
+      "airport": "达州/金垭",
+      "city": "达州",
+      "name": "金垭",
+      "passengers_2025": 1143396
+    },
+    {
+      "airport": "衢州",
+      "city": "",
+      "name": "衢州",
+      "passengers_2025": 1111124
+    },
+    {
+      "airport": "乌兰浩特/义勒力特",
+      "city": "乌兰浩特",
+      "name": "义勒力特",
+      "passengers_2025": 1107433
+    },
+    {
+      "airport": "哈密/伊州",
+      "city": "哈密",
+      "name": "伊州",
+      "passengers_2025": 1085699
+    },
+    {
+      "airport": "南充/高坪",
+      "city": "南充",
+      "name": "高坪",
+      "passengers_2025": 1073038
+    },
+    {
+      "airport": "南阳/姜营",
+      "city": "南阳",
+      "name": "姜营",
+      "passengers_2025": 1036774
+    },
+    {
+      "airport": "阜阳",
+      "city": "",
+      "name": "阜阳",
+      "passengers_2025": 1021934
+    },
+    {
+      "airport": "芜湖/宣州",
+      "city": "芜湖",
+      "name": "宣州",
+      "passengers_2025": 1007559
+    },
+    {
+      "airport": "林芝/米林",
+      "city": "林芝",
+      "name": "米林",
+      "passengers_2025": 967829
+    },
+    {
+      "airport": "西昌/青山",
+      "city": "西昌",
+      "name": "青山",
+      "passengers_2025": 955046
+    },
+    {
+      "airport": "洛阳/北郊",
+      "city": "洛阳",
+      "name": "北郊",
+      "passengers_2025": 954917
+    },
+    {
+      "airport": "邯郸",
+      "city": "",
+      "name": "邯郸",
+      "passengers_2025": 952260
+    },
+    {
+      "airport": "大同/云冈",
+      "city": "大同",
+      "name": "云冈",
+      "passengers_2025": 950646
+    },
+    {
+      "airport": "库车/龟兹",
+      "city": "库车",
+      "name": "龟兹",
+      "passengers_2025": 912911
+    },
+    {
+      "airport": "大庆/萨尔图",
+      "city": "大庆",
+      "name": "萨尔图",
+      "passengers_2025": 900392
+    },
+    {
+      "airport": "万州/五桥",
+      "city": "万州",
+      "name": "五桥",
+      "passengers_2025": 891860
+    },
+    {
+      "airport": "临汾/尧都",
+      "city": "临汾",
+      "name": "尧都",
+      "passengers_2025": 890280
+    },
+    {
+      "airport": "吐鲁番/交河",
+      "city": "吐鲁番",
+      "name": "交河",
+      "passengers_2025": 886878
+    },
+    {
+      "airport": "佳木斯/松江",
+      "city": "佳木斯",
+      "name": "松江",
+      "passengers_2025": 875834
+    },
+    {
+      "airport": "长治/王村",
+      "city": "长治",
+      "name": "王村",
+      "passengers_2025": 850987
+    },
+    {
+      "airport": "琼海/博鳌",
+      "city": "琼海",
+      "name": "博鳌",
+      "passengers_2025": 848808
+    },
+    {
+      "airport": "腾冲/驼峰",
+      "city": "腾冲",
+      "name": "驼峰",
+      "passengers_2025": 842326
+    },
+    {
+      "airport": "菏泽/牡丹",
+      "city": "菏泽",
+      "name": "牡丹",
+      "passengers_2025": 837835
+    },
+    {
+      "airport": "上饶/三清山",
+      "city": "上饶",
+      "name": "三清山",
+      "passengers_2025": 834070
+    },
+    {
+      "airport": "日照/山字河",
+      "city": "日照",
+      "name": "山字河",
+      "passengers_2025": 784300
+    },
+    {
+      "airport": "常德/桃花源",
+      "city": "常德",
+      "name": "桃花源",
+      "passengers_2025": 782822
+    },
+    {
+      "airport": "乌海",
+      "city": "",
+      "name": "乌海",
+      "passengers_2025": 770945
+    },
+    {
+      "airport": "吉安/井冈山",
+      "city": "吉安",
+      "name": "井冈山",
+      "passengers_2025": 722828
+    },
+    {
+      "airport": "克拉玛依/古海",
+      "city": "克拉玛依",
+      "name": "古海",
+      "passengers_2025": 722187
+    },
+    {
+      "airport": "唐山/三女河",
+      "city": "唐山",
+      "name": "三女河",
+      "passengers_2025": 653045
+    },
+    {
+      "airport": "延安/南泥湾",
+      "city": "延安",
+      "name": "南泥湾",
+      "passengers_2025": 644562
+    },
+    {
+      "airport": "白山/长白山",
+      "city": "白山",
+      "name": "长白山",
+      "passengers_2025": 633741
+    },
+    {
+      "airport": "石河子/花园",
+      "city": "石河子",
+      "name": "花园",
+      "passengers_2025": 627933
+    },
+    {
+      "airport": "塔城/千泉",
+      "city": "塔城",
+      "name": "千泉",
+      "passengers_2025": 611898
+    },
+    {
+      "airport": "庆阳",
+      "city": "",
+      "name": "庆阳",
+      "passengers_2025": 607386
+    },
+    {
+      "airport": "铜仁/凤凰",
+      "city": "铜仁",
+      "name": "凤凰",
+      "passengers_2025": 604944
+    },
+    {
+      "airport": "广元/盘龙",
+      "city": "广元",
+      "name": "盘龙",
+      "passengers_2025": 595464
+    },
+    {
+      "airport": "齐齐哈尔/三家子",
+      "city": "齐齐哈尔",
+      "name": "三家子",
+      "passengers_2025": 591182
+    },
+    {
+      "airport": "吕梁/大武",
+      "city": "吕梁",
+      "name": "大武",
+      "passengers_2025": 574729
+    },
+    {
+      "airport": "博乐/阿拉山口",
+      "city": "博乐",
+      "name": "阿拉山口",
+      "passengers_2025": 568887
+    },
+    {
+      "airport": "巴中/恩阳",
+      "city": "巴中",
+      "name": "恩阳",
+      "passengers_2025": 563754
+    },
+    {
+      "airport": "汉中/城固",
+      "city": "汉中",
+      "name": "城固",
+      "passengers_2025": 545929
+    },
+    {
+      "airport": "莎车/叶尔羌",
+      "city": "莎车",
+      "name": "叶尔羌",
+      "passengers_2025": 521746
+    },
+    {
+      "airport": "忻州/五台山",
+      "city": "忻州",
+      "name": "五台山",
+      "passengers_2025": 518692
+    },
+    {
+      "airport": "阿拉尔/塔里木",
+      "city": "阿拉尔",
+      "name": "塔里木",
+      "passengers_2025": 511162
+    },
+    {
+      "airport": "安康/富强",
+      "city": "安康",
+      "name": "富强",
+      "passengers_2025": 479406
+    },
+    {
+      "airport": "宜春/明月山",
+      "city": "宜春",
+      "name": "明月山",
+      "passengers_2025": 478269
+    },
+    {
+      "airport": "保山/云瑞",
+      "city": "保山",
+      "name": "云瑞",
+      "passengers_2025": 474348
+    },
+    {
+      "airport": "潍坊",
+      "city": "",
+      "name": "潍坊",
+      "passengers_2025": 469259
+    },
+    {
+      "airport": "昌都/邦达",
+      "city": "昌都",
+      "name": "邦达",
+      "passengers_2025": 468926
+    },
+    {
+      "airport": "郴州/北湖",
+      "city": "郴州",
+      "name": "北湖",
+      "passengers_2025": 455579
+    },
+    {
+      "airport": "昭通",
+      "city": "",
+      "name": "昭通",
+      "passengers_2025": 454690
+    },
+    {
+      "airport": "图木舒克/唐王城",
+      "city": "图木舒克",
+      "name": "唐王城",
+      "passengers_2025": 451920
+    },
+    {
+      "airport": "鸡西/兴凯湖",
+      "city": "鸡西",
+      "name": "兴凯湖",
+      "passengers_2025": 437702
+    },
+    {
+      "airport": "迪庆/香格里拉",
+      "city": "迪庆",
+      "name": "香格里拉",
+      "passengers_2025": 428318
+    },
+    {
+      "airport": "怀化/芷江",
+      "city": "怀化",
+      "name": "芷江",
+      "passengers_2025": 417485
+    },
+    {
+      "airport": "玉树/巴塘",
+      "city": "玉树",
+      "name": "巴塘",
+      "passengers_2025": 405531
+    },
+    {
+      "airport": "三明/沙县",
+      "city": "三明",
+      "name": "沙县",
+      "passengers_2025": 390474
+    },
+    {
+      "airport": "陇南/成县",
+      "city": "陇南",
+      "name": "成县",
+      "passengers_2025": 388766
+    },
+    {
+      "airport": "九江/庐山",
+      "city": "九江",
+      "name": "庐山",
+      "passengers_2025": 382490
+    },
+    {
+      "airport": "巴彦淖尔/天吉泰",
+      "city": "巴彦淖尔",
+      "name": "天吉泰",
+      "passengers_2025": 367154
+    },
+    {
+      "airport": "格尔木",
+      "city": "",
+      "name": "格尔木",
+      "passengers_2025": 362343
+    },
+    {
+      "airport": "湘西/边城",
+      "city": "湘西",
+      "name": "边城",
+      "passengers_2025": 361027
+    },
+    {
+      "airport": "满洲里/西郊",
+      "city": "满洲里",
+      "name": "西郊",
+      "passengers_2025": 346804
+    },
+    {
+      "airport": "黑河/瑷珲",
+      "city": "黑河",
+      "name": "瑷珲",
+      "passengers_2025": 345078
+    },
+    {
+      "airport": "景德镇/罗家",
+      "city": "景德镇",
+      "name": "罗家",
+      "passengers_2025": 331426
+    },
+    {
+      "airport": "安庆/天柱山",
+      "city": "安庆",
+      "name": "天柱山",
+      "passengers_2025": 330601
+    },
+    {
+      "airport": "中卫/沙坡头",
+      "city": "中卫",
+      "name": "沙坡头",
+      "passengers_2025": 329627
+    },
+    {
+      "airport": "二连浩特/赛乌素",
+      "city": "二连浩特",
+      "name": "赛乌素",
+      "passengers_2025": 327810
+    },
+    {
+      "airport": "池州/九华山",
+      "city": "池州",
+      "name": "九华山",
+      "passengers_2025": 324119
+    },
+    {
+      "airport": "武夷山",
+      "city": "",
+      "name": "武夷山",
+      "passengers_2025": 319361
+    },
+    {
+      "airport": "黄山/屯溪",
+      "city": "黄山",
+      "name": "屯溪",
+      "passengers_2025": 318012
+    },
+    {
+      "airport": "岳阳/三荷",
+      "city": "岳阳",
+      "name": "三荷",
+      "passengers_2025": 316609
+    },
+    {
+      "airport": "信阳/明港",
+      "city": "信阳",
+      "name": "明港",
+      "passengers_2025": 303868
+    },
+    {
+      "airport": "张掖/甘州",
+      "city": "张掖",
+      "name": "甘州",
+      "passengers_2025": 297932
+    },
+    {
+      "airport": "秦皇岛/北戴河",
+      "city": "秦皇岛",
+      "name": "北戴河",
+      "passengers_2025": 292657
+    },
+    {
+      "airport": "锦州/锦州湾",
+      "city": "锦州",
+      "name": "锦州湾",
+      "passengers_2025": 285167
+    },
+    {
+      "airport": "奇台/江布拉克",
+      "city": "奇台",
+      "name": "江布拉克",
+      "passengers_2025": 282178
+    },
+    {
+      "airport": "漠河/古莲",
+      "city": "漠河",
+      "name": "古莲",
+      "passengers_2025": 271443
+    },
+    {
+      "airport": "伊春/林都",
+      "city": "伊春",
+      "name": "林都",
+      "passengers_2025": 268658
+    },
+    {
+      "airport": "鄂州/花湖",
+      "city": "鄂州",
+      "name": "花湖",
+      "passengers_2025": 262424
+    },
+    {
+      "airport": "玉林/福绵",
+      "city": "玉林",
+      "name": "福绵",
+      "passengers_2025": 241611
+    },
+    {
+      "airport": "大兴安岭/鄂伦春",
+      "city": "大兴安岭",
+      "name": "鄂伦春",
+      "passengers_2025": 235716
+    },
+    {
+      "airport": "金昌/金川",
+      "city": "金昌",
+      "name": "金川",
+      "passengers_2025": 231665
+    },
+    {
+      "airport": "牡丹江/海浪",
+      "city": "牡丹江",
+      "name": "海浪",
+      "passengers_2025": 221033
+    },
+    {
+      "airport": "韶关/丹霞",
+      "city": "韶关",
+      "name": "丹霞",
+      "passengers_2025": 219943
+    },
+    {
+      "airport": "阆中/古城",
+      "city": "阆中",
+      "name": "古城",
+      "passengers_2025": 213036
+    },
+    {
+      "airport": "白城/长安",
+      "city": "白城",
+      "name": "长安",
+      "passengers_2025": 204937
+    },
+    {
+      "airport": "通化/三源浦",
+      "city": "通化",
+      "name": "三源浦",
+      "passengers_2025": 198445
+    },
+    {
+      "airport": "临沧/博尚",
+      "city": "临沧",
+      "name": "博尚",
+      "passengers_2025": 197274
+    },
+    {
+      "airport": "朔州/滋润",
+      "city": "朔州",
+      "name": "滋润",
+      "passengers_2025": 195955
+    },
+    {
+      "airport": "邵阳/武冈",
+      "city": "邵阳",
+      "name": "武冈",
+      "passengers_2025": 195183
+    },
+    {
+      "airport": "张家口/宁远",
+      "city": "张家口",
+      "name": "宁远",
+      "passengers_2025": 195052
+    },
+    {
+      "airport": "于田/万方",
+      "city": "于田",
+      "name": "万方",
+      "passengers_2025": 194689
+    },
+    {
+      "airport": "文山/砚山",
+      "city": "文山",
+      "name": "砚山",
+      "passengers_2025": 193860
+    },
+    {
+      "airport": "安阳/红旗渠",
+      "city": "安阳",
+      "name": "红旗渠",
+      "passengers_2025": 193396
+    },
+    {
+      "airport": "阿里/昆莎",
+      "city": "阿里",
+      "name": "昆莎",
+      "passengers_2025": 191746
+    },
+    {
+      "airport": "永州/零陵",
+      "city": "永州",
+      "name": "零陵",
+      "passengers_2025": 187394
+    },
+    {
+      "airport": "普洱/思茅",
+      "city": "普洱",
+      "name": "思茅",
+      "passengers_2025": 185686
+    },
+    {
+      "airport": "扎兰屯/成吉思汗",
+      "city": "扎兰屯",
+      "name": "成吉思汗",
+      "passengers_2025": 185255
+    },
+    {
+      "airport": "霍林郭勒/霍林河",
+      "city": "霍林郭勒",
+      "name": "霍林河",
+      "passengers_2025": 169575
+    },
+    {
+      "airport": "攀枝花/保安营",
+      "city": "攀枝花",
+      "name": "保安营",
+      "passengers_2025": 167476
+    },
+    {
+      "airport": "松原/查干湖",
+      "city": "松原",
+      "name": "查干湖",
+      "passengers_2025": 158463
+    },
+    {
+      "airport": "营口/兰旗",
+      "city": "营口",
+      "name": "兰旗",
+      "passengers_2025": 157511
+    },
+    {
+      "airport": "邢台/褡裢",
+      "city": "邢台",
+      "name": "褡裢",
+      "passengers_2025": 154420
+    },
+    {
+      "airport": "丽水",
+      "city": "",
+      "name": "丽水",
+      "passengers_2025": 146302
+    },
+    {
+      "airport": "鞍山/腾鳌",
+      "city": "鞍山",
+      "name": "腾鳌",
+      "passengers_2025": 129867
+    },
+    {
+      "airport": "固原/六盘山",
+      "city": "固原",
+      "name": "六盘山",
+      "passengers_2025": 127510
+    },
+    {
+      "airport": "沧源/佤山",
+      "city": "沧源",
+      "name": "佤山",
+      "passengers_2025": 126427
+    },
+    {
+      "airport": "梅州/梅县",
+      "city": "梅州",
+      "name": "梅县",
+      "passengers_2025": 126119
+    },
+    {
+      "airport": "日喀则/和平",
+      "city": "日喀则",
+      "name": "和平",
+      "passengers_2025": 125883
+    },
+    {
+      "airport": "梧州/西江",
+      "city": "梧州",
+      "name": "西江",
+      "passengers_2025": 123353
+    },
+    {
+      "airport": "昭苏/天马",
+      "city": "昭苏",
+      "name": "天马",
+      "passengers_2025": 117306
+    },
+    {
+      "airport": "若羌/楼兰",
+      "city": "若羌",
+      "name": "楼兰",
+      "passengers_2025": 116657
+    },
+    {
+      "airport": "承德/普宁",
+      "city": "承德",
+      "name": "普宁",
+      "passengers_2025": 115057
+    },
+    {
+      "airport": "澜沧/景迈",
+      "city": "澜沧",
+      "name": "景迈",
+      "passengers_2025": 113611
+    },
+    {
+      "airport": "甘南/夏河",
+      "city": "甘南",
+      "name": "夏河",
+      "passengers_2025": 112335
+    },
+    {
+      "airport": "阿拉善左旗/巴彦浩特",
+      "city": "阿拉善左旗",
+      "name": "巴彦浩特",
+      "passengers_2025": 108572
+    },
+    {
+      "airport": "乌兰察布/集宁",
+      "city": "乌兰察布",
+      "name": "集宁",
+      "passengers_2025": 106639
+    },
+    {
+      "airport": "果洛/玛沁",
+      "city": "果洛",
+      "name": "玛沁",
+      "passengers_2025": 106239
+    },
+    {
+      "airport": "且末/玉都",
+      "city": "且末",
+      "name": "玉都",
+      "passengers_2025": 101364
+    },
+    {
+      "airport": "黔江/武陵山",
+      "city": "黔江",
+      "name": "武陵山",
+      "passengers_2025": 98337
+    },
+    {
+      "airport": "丹东/浪头",
+      "city": "丹东",
+      "name": "浪头",
+      "passengers_2025": 95286
+    },
+    {
+      "airport": "富蕴/可可托海",
+      "city": "富蕴",
+      "name": "可可托海",
+      "passengers_2025": 93999
+    },
+    {
+      "airport": "毕节/飞雄",
+      "city": "毕节",
+      "name": "飞雄",
+      "passengers_2025": 93076
+    },
+    {
+      "airport": "稻城/亚丁",
+      "city": "稻城",
+      "name": "亚丁",
+      "passengers_2025": 89635
+    },
+    {
+      "airport": "抚远/东极",
+      "city": "抚远",
+      "name": "东极",
+      "passengers_2025": 86447
+    },
+    {
+      "airport": "建三江/湿地",
+      "city": "建三江",
+      "name": "湿地",
+      "passengers_2025": 86419
+    },
+    {
+      "airport": "海西/茫崖",
+      "city": "海西",
+      "name": "茫崖",
+      "passengers_2025": 76329
+    },
+    {
+      "airport": "阿尔山/伊尔施",
+      "city": "阿尔山",
+      "name": "伊尔施",
+      "passengers_2025": 67345
+    },
+    {
+      "airport": "安顺/黄果树",
+      "city": "安顺",
+      "name": "黄果树",
+      "passengers_2025": 66345
+    },
+    {
+      "airport": "黔南/荔波",
+      "city": "黔南",
+      "name": "荔波",
+      "passengers_2025": 66160
+    },
+    {
+      "airport": "巴里坤/大河",
+      "city": "巴里坤",
+      "name": "大河",
+      "passengers_2025": 62106
+    },
+    {
+      "airport": "六盘水/月照",
+      "city": "六盘水",
+      "name": "月照",
+      "passengers_2025": 61406
+    },
+    {
+      "airport": "三沙/永兴",
+      "city": "三沙",
+      "name": "永兴",
+      "passengers_2025": 57566
+    },
+    {
+      "airport": "甘孜/格萨尔",
+      "city": "甘孜",
+      "name": "格萨尔",
+      "passengers_2025": 53896
+    },
+    {
+      "airport": "朝阳",
+      "city": "",
+      "name": "朝阳",
+      "passengers_2025": 51065
+    },
+    {
+      "airport": "绥芬河/东宁",
+      "city": "绥芬河",
+      "name": "东宁",
+      "passengers_2025": 49647
+    },
+    {
+      "airport": "新源/那拉提",
+      "city": "新源",
+      "name": "那拉提",
+      "passengers_2025": 48866
+    },
+    {
+      "airport": "海西/德令哈",
+      "city": "海西",
+      "name": "德令哈",
+      "passengers_2025": 47122
+    },
+    {
+      "airport": "五大连池/德都",
+      "city": "五大连池",
+      "name": "德都",
+      "passengers_2025": 44369
+    },
+    {
+      "airport": "赣州/瑞金",
+      "city": "赣州",
+      "name": "瑞金",
+      "passengers_2025": 43214
+    },
+    {
+      "airport": "布尔津/喀纳斯",
+      "city": "布尔津",
+      "name": "喀纳斯",
+      "passengers_2025": 42719
+    },
+    {
+      "airport": "亳州",
+      "city": "",
+      "name": "亳州",
+      "passengers_2025": 37351
+    },
+    {
+      "airport": "九寨/黄龙",
+      "city": "九寨",
+      "name": "黄龙",
+      "passengers_2025": 32011
+    },
+    {
+      "airport": "重庆/巫山",
+      "city": "重庆",
+      "name": "巫山",
+      "passengers_2025": 31458
+    },
+    {
+      "airport": "阿坝/红原",
+      "city": "阿坝",
+      "name": "红原",
+      "passengers_2025": 28107
+    },
+    {
+      "airport": "百色/巴马",
+      "city": "百色",
+      "name": "巴马",
+      "passengers_2025": 23190
+    },
+    {
+      "airport": "天水/麦积山",
+      "city": "天水",
+      "name": "麦积山",
+      "passengers_2025": 20557
+    },
+    {
+      "airport": "塔什库尔干/红其拉甫",
+      "city": "塔什库尔干",
+      "name": "红其拉甫",
+      "passengers_2025": 16209
+    },
+    {
+      "airport": "凯里/黄平",
+      "city": "凯里",
+      "name": "黄平",
+      "passengers_2025": 14395
+    },
+    {
+      "airport": "阿里/普兰",
+      "city": "阿里",
+      "name": "普兰",
+      "passengers_2025": 12909
+    },
+    {
+      "airport": "重庆/仙女山",
+      "city": "重庆",
+      "name": "仙女山",
+      "passengers_2025": 10488
+    },
+    {
+      "airport": "海北/祁连",
+      "city": "海北",
+      "name": "祁连",
+      "passengers_2025": 10444
+    },
+    {
+      "airport": "宁蒗/泸沽湖",
+      "city": "宁蒗",
+      "name": "泸沽湖",
+      "passengers_2025": 7917
+    },
+    {
+      "airport": "嘉兴/南湖",
+      "city": "嘉兴",
+      "name": "南湖",
+      "passengers_2025": 7450
+    },
+    {
+      "airport": "神农架/红坪",
+      "city": "神农架",
+      "name": "红坪",
+      "passengers_2025": 6739
+    },
+    {
+      "airport": "甘孜/康定",
+      "city": "甘孜",
+      "name": "康定",
+      "passengers_2025": 6430
+    },
+    {
+      "airport": "日喀则/定日",
+      "city": "日喀则",
+      "name": "定日",
+      "passengers_2025": 4954
+    },
+    {
+      "airport": "山南/隆子",
+      "city": "山南",
+      "name": "隆子",
+      "passengers_2025": 4813
+    },
+    {
+      "airport": "额济纳旗/桃来",
+      "city": "额济纳旗",
+      "name": "桃来",
+      "passengers_2025": 4355
+    },
+    {
+      "airport": "阿拉善右旗/巴丹吉林",
+      "city": "阿拉善右旗",
+      "name": "巴丹吉林",
+      "passengers_2025": 3885
+    },
+    {
+      "airport": "长海/大长山岛",
+      "city": "长海",
+      "name": "大长山岛",
+      "passengers_2025": 2174
+    },
+    {
+      "airport": "河池/金城江",
+      "city": "河池",
+      "name": "金城江",
+      "passengers_2025": 2018
+    },
+    {
+      "airport": "和静/巴音布鲁克",
+      "city": "和静",
+      "name": "巴音布鲁克",
+      "passengers_2025": 208
+    }
+  ]
+}
